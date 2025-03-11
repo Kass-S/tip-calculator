@@ -7,10 +7,11 @@ function App() {
   return (
     <div>
       <div>
-        <p className='flex justify-center my-5'>Splitter</p>
+        <p className='flex justify-center text-2xl font-bold mt-20 my-10 text-color-dark'>Splitter</p>
       </div>
+
+      <TipCard />     
       
-      <TipCard />
     </div>
   )
 }
