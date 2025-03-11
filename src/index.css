@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+    font-family: "SpaceMono";
+    src: url("/assets/fonts/SpaceMono-Regular.ttf");
+}
+
+.font-space-mono{
+    font-family: "SpaceMono", Arial, Helvetica, sans-serif;
+}
+
 .bg-color{
     background-color: hsl(185, 41%, 84%);
+}
+
+.inner-card-bg{
+    background-color: hsl(183, 100%, 15%);
+}
+
+.text-color{
+    color: hsl(184, 14%, 56%);
+}
+
+.text-color-dark{
+    color: hsl(186, 14%, 43%); 
 }

@@ -5,13 +5,31 @@ const TipCard = () => {
 
   return (
     <div className='flex justify-center'>
-        <Card className="max-w-4xl min-w-52">
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Noteworthy technology acquisitions 2021
+        <Card className="lg:w-[56rem]">
+            <h5 className=" font-bold text-color-dark">
+                Bill
             </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-            </p>
+            <h5 className=" font-bold text-color-dark">
+                Select Tip %
+            </h5>
+            <h5 className=" font-bold text-color-dark">
+                Number of People
+            </h5>
+            
+            <Card className="max-w-sm inner-card-bg">
+                <h5 className="font-bold text-white">
+                    Tip Amount
+                </h5>
+                <p className="font-normal text-color">
+                    / person
+                </p>
+                <h5 className="font-bold text-white">
+                    Total
+                </h5>
+                <p className="font-normal text-color">
+                    / person
+                </p>
+            </Card>
         </Card>
     </div>
   )
