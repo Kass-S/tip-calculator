@@ -11,7 +11,8 @@ const TipCard = () => {
                     <h5 className=" font-bold text-color-dark">
                         Bill
                     </h5>
-                    <input type="number" className='input-bg rounded-lg' />
+                    <img src="/assets/icon-dollar.svg" alt="" />
+                    <input type="number" className='input-bg rounded-lg text-right' />
                 </div>
                 
                 <div className='my-6'>
@@ -24,7 +25,7 @@ const TipCard = () => {
                         <button className='inner-card-bg rounded-md text-lg py-1 m-2 text-white button-hover'>15%</button>
                         <button className='inner-card-bg rounded-md text-lg py-1 m-2 text-white button-hover'>25%</button>
                         <button className='inner-card-bg rounded-md text-lg py-1 m-2 text-white button-hover'>50%</button>
-                        <input type="text" placeholder="Custom" className='input-bg rounded-md text-lg py-1 m-2' />
+                        <input type="text" placeholder="Custom" className='input-bg rounded-md text-lg py-1 m-2 text-right' /> 
                     </div>
                 </div>
 
@@ -32,7 +33,7 @@ const TipCard = () => {
                     <h5 className=" font-bold text-color-dark">
                         Number of People
                     </h5>
-                    <input type="number" className='input-bg rounded-lg' />
+                    <input type="number" className='input-bg rounded-lg text-right' />
                 </div>
                 
             </div>      
@@ -56,7 +57,7 @@ const TipCard = () => {
                     </p>
                 </div>
 
-                <button className='text-white button-hover rounded-lg reset-btn-bg'>Reset</button>
+                <button className='text-white button-hover rounded-lg reset-btn-bg p-2 px-6'>Reset</button>
                 
             </div>
         </div>
