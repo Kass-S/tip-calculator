@@ -5,24 +5,34 @@ const TipCard = () => {
     const [peopleNum, setPeopleNum] = useState(0);
     const [tip, setTip] = useState(0);
 
+    const [tipAmount, setTipAmount] = useState(0.00);
+    const [total, setTotal] = useState(0.00);
+
     let billNum = Number(billInput);
     let people = Number(peopleNum);
     let tipNum = Number(tip);
-    tipNum /= 100;
     
-    
-    let tipAmount = 0.00;
-    tipAmount = billNum * tipNum;
-    let total = 0.00;
-    total = billNum / people + tipAmount;
-    
-    
+   
+        
 
-    // useEffect(() => {
-    //     console.log(billInput);
-    //     console.log(peopleNum);
-    //     console.log(tip);
-    // },[billInput, peopleNum, tip])
+    useEffect(() => {
+        const Calculator = () => {
+            tipNum /= 100;
+            
+            if(billNum != 0 && people != 0){
+                let preTip = billNum * tipNum
+                let preTipPerson = preTip / people;
+                
+                setTipAmount(preTipPerson.toFixed(2));
+                setTotal((billNum / people + preTipPerson).toFixed(2));
+            }else{
+                setTipAmount("0.00");
+                setTotal("0.00");
+            }
+            //add billNum == 0 and people == 0 conditionals where the focus turns orange and tells the user they cant be 0    
+        }
+        Calculator();
+    },[billInput, peopleNum, tip])
 
   return (
     <div className='flex justify-center'>
@@ -77,7 +87,7 @@ const TipCard = () => {
                         </p>
                     </div>
 
-                    <p className='money-number-color text-3xl font-bold'>$0.00</p>
+                    <p className='money-number-color text-3xl font-bold'>${tipAmount}</p>
                 </div>
                 
                 <div className='m-2 my-3 md:m-6 flex justify-between'>
@@ -90,7 +100,7 @@ const TipCard = () => {
                         </p>                        
                     </div>
 
-                    <p className='money-number-color text-3xl font-bold'>$0.00</p>
+                    <p className='money-number-color text-3xl font-bold'>${total}</p>
                 </div>
 
                 <div className='mx-2 md:mx-6 mt-6 md:mt-28'>
