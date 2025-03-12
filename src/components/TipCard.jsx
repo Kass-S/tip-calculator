@@ -10,16 +10,19 @@ const TipCard = () => {
     let tipNum = Number(tip);
     tipNum /= 100;
     
-    let tipAmount = billNum * tipNum;
-    let total = billNum / people + tipAmount;
-    console.log(total)
+    
+    let tipAmount = 0.00;
+    tipAmount = billNum * tipNum;
+    let total = 0.00;
+    total = billNum / people + tipAmount;
+    
     
 
     // useEffect(() => {
     //     console.log(billInput);
     //     console.log(peopleNum);
-    //     console.log(Tip);
-    // },[billInput, peopleNum, Tip])
+    //     console.log(tip);
+    // },[billInput, peopleNum, tip])
 
   return (
     <div className='flex justify-center'>
@@ -29,8 +32,11 @@ const TipCard = () => {
                     <h5 className=" font-bold text-color-dark">
                         Bill
                     </h5>
-                    {/* <img src="/assets/icon-dollar.svg" alt="dollar sign icon" /> */}
-                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' onChange={(e) => {setBillInput(e.target.value)}} />
+                    
+                    <div className='input-icons'>
+                        <img className='icon' src="/assets/icon-dollar.svg" alt="dollar sign icon" />
+                        <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' onChange={(e) => {setBillInput(e.target.value)}} />
+                    </div>
                 </div>
                 
                 <div className='my-6'>
@@ -51,7 +57,11 @@ const TipCard = () => {
                     <h5 className=" font-bold text-color-dark">
                         Number of People
                     </h5>
-                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' onChange={(e) => {setPeopleNum(e.target.value)}} />
+                    
+                    <div className='input-icons'>
+                        <img className='icon' src="/assets/icon-person.svg" alt="people icon" />
+                        <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' onChange={(e) => {setPeopleNum(e.target.value)}} />
+                    </div>
                 </div>
                 
             </div>      
@@ -84,7 +94,7 @@ const TipCard = () => {
                 </div>
 
                 <div className='mx-2 md:mx-6 mt-6 md:mt-28'>
-                    <button className='input-text-color button-hover rounded-lg reset-btn-bg p-2 w-full font-bold'>RESET</button>
+                    <button className='input-text-color button-hover rounded-md reset-btn-bg p-2 w-full font-bold'>RESET</button>
                 </div>
 
             </div>

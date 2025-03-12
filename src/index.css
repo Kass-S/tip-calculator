@@ -52,3 +52,16 @@
 .money-number-color{
     color: hsl(172, 67%, 45%);
 }
+
+.input-icons{
+    width: 100%;
+}
+
+.input-icons img{
+    position: absolute;
+}
+
+.icon{
+    padding: .9rem;
+    min-width: 1rem;
+}
