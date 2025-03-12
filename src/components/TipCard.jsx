@@ -10,7 +10,7 @@ const TipCard = () => {
                     <h5 className=" font-bold text-color-dark">
                         Bill
                     </h5>
-                    <img src="/assets/icon-dollar.svg" alt="" />
+                    {/* <img src="/assets/icon-dollar.svg" alt="dollar sign icon" /> */}
                     <input type="number" className='input-bg rounded-lg text-right w-full input-text-color' />
                 </div>
                 
@@ -38,25 +38,33 @@ const TipCard = () => {
             </div>      
             
             <div className="max-w-lg inner-card-bg p-4 m-6 rounded-2xl">
-                <div className='m-6'>
-                    <h5 className="font-bold text-white">
-                        Tip Amount
-                    </h5>
-                    <p className="font-normal text-color">
-                        / person
-                    </p>
+                <div className='m-6 flex justify-between'>
+                    <div>
+                        <h5 className="font-bold text-white">
+                            Tip Amount
+                        </h5>
+                        <p className="font-normal text-color">
+                            / person
+                        </p>
+                    </div>
+
+                    <p className='money-number-color text-3xl font-bold'>$0.00</p>
                 </div>
                 
-                <div className='m-6'>
-                    <h5 className="font-bold text-white">
-                        Total
-                    </h5>
-                    <p className="font-normal text-color">
-                        / person
-                    </p>
+                <div className='m-6 flex justify-between'>
+                    <div>
+                        <h5 className="font-bold text-white">
+                            Total
+                        </h5>
+                        <p className="font-normal text-color">
+                            / person
+                        </p>                        
+                    </div>
+
+                    <p className='money-number-color text-3xl font-bold'>$0.00</p>
                 </div>
 
-                <div className='m-6 mt-16'>
+                <div className='mx-6 mt-28'>
                     <button className='text-white button-hover rounded-lg reset-btn-bg p-2 w-full '>Reset</button>
                 </div>
 

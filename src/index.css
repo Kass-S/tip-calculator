@@ -43,3 +43,7 @@
 .input-text-color{
     color: hsl(183, 100%, 15%);
 }
+
+.money-number-color{
+    color: hsl(172, 67%, 45%);
+}
