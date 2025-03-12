@@ -11,7 +11,7 @@ const TipCard = () => {
                         Bill
                     </h5>
                     {/* <img src="/assets/icon-dollar.svg" alt="dollar sign icon" /> */}
-                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl' />
+                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' />
                 </div>
                 
                 <div className='my-6'>
@@ -24,7 +24,7 @@ const TipCard = () => {
                         <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover'>15%</button>
                         <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover'>25%</button>
                         <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover'>50%</button>
-                        <input type="text" placeholder="Custom" className='input-bg rounded-md text-xl py-2 m-2 text-right input-text-color font-bold' /> 
+                        <input type="text" placeholder="Custom" className='input-bg rounded-md text-xl py-2 m-2 text-right input-text-color font-bold focus:ring-0 stuff' /> 
                     </div>
                 </div>
 
@@ -32,7 +32,7 @@ const TipCard = () => {
                     <h5 className=" font-bold text-color-dark">
                         Number of People
                     </h5>
-                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl' />
+                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' />
                 </div>
                 
             </div>      

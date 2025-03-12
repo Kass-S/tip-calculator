@@ -45,6 +45,10 @@
     color: hsl(183, 100%, 15%);
 }
 
+.stuff:focus{
+    border: 2px solid hsl(172, 70%, 62%); 
+}
+
 .money-number-color{
     color: hsl(172, 67%, 45%);
 }
