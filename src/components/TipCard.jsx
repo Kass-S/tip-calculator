@@ -5,14 +5,16 @@ const TipCard = () => {
     const [peopleNum, setPeopleNum] = useState(0);
     const [tip, setTip] = useState(0);
 
-
-    const NumberConvert = () => {
-        let billNum = Number(billInput);
-        let people = Number(peopleNum);
-        let tipNum = Number(tip);
-        tipNum /= 100;
-    }
+    let billNum = Number(billInput);
+    let people = Number(peopleNum);
+    let tipNum = Number(tip);
+    tipNum /= 100;
     
+    let tipAmount = billNum * tipNum;
+    let total = billNum / people + tipAmount;
+    console.log(total)
+    
+
     // useEffect(() => {
     //     console.log(billInput);
     //     console.log(peopleNum);
