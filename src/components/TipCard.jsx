@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const TipCard = () => {
+    const [billInput, setBillInput] = useState(0);
+    const [peopleNum, setPeopleNum] = useState(0);
+    const [tip, setTip] = useState(0);
+
+
+    const NumberConvert = () => {
+        let billNum = Number(billInput);
+        let people = Number(peopleNum);
+        let tipNum = Number(tip);
+        tipNum /= 100;
+    }
+    
+    // useEffect(() => {
+    //     console.log(billInput);
+    //     console.log(peopleNum);
+    //     console.log(Tip);
+    // },[billInput, peopleNum, Tip])
 
   return (
     <div className='flex justify-center'>
@@ -11,7 +28,7 @@ const TipCard = () => {
                         Bill
                     </h5>
                     {/* <img src="/assets/icon-dollar.svg" alt="dollar sign icon" /> */}
-                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' />
+                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' onChange={(e) => {setBillInput(e.target.value)}} />
                 </div>
                 
                 <div className='my-6'>
@@ -19,12 +36,12 @@ const TipCard = () => {
                         Select Tip %
                     </h5>
                     <div className='grid grid-cols-2 md:grid-cols-3 mx-4 font-bold'>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover'>5%</button>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover'>10%</button>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover'>15%</button>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover'>25%</button>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover'>50%</button>
-                        <input type="text" placeholder="Custom" className='input-bg rounded-md text-xl py-2 m-2 text-right input-text-color font-bold focus:ring-0 stuff' /> 
+                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(5)}}>5%</button>
+                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(10)}}>10%</button>
+                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(15)}}>15%</button>
+                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(25)}}>25%</button>
+                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(50)}}>50%</button>
+                        <input type="text" placeholder="Custom" className='input-bg rounded-md text-xl py-2 m-2 text-right input-text-color font-bold focus:ring-0 stuff' onChange={(e) => {setTip(e.target.value)}} /> 
                     </div>
                 </div>
 
@@ -32,7 +49,7 @@ const TipCard = () => {
                     <h5 className=" font-bold text-color-dark">
                         Number of People
                     </h5>
-                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' />
+                    <input type="number" className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' onChange={(e) => {setPeopleNum(e.target.value)}} />
                 </div>
                 
             </div>      
