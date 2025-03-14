@@ -52,7 +52,12 @@ const TipCard = () => {
                     
                     <div className='input-icons'>
                         <img className='icon' src="/assets/icon-dollar.svg" alt="dollar sign icon" />
-                        <input type="text" placeholder='0' className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' value={billInput} onChange={(e) => {setBillInput(e.target.value)}} />
+                        <input type="text" placeholder='0' className={`input-bg rounded-lg text-right w-full input-text-color font-bold text-xl focus:ring-0 ${
+                            peopleNum == 0 && peopleNum != ''
+                            ? 'orange-focus'
+                            : 'blue-focus'
+
+                        }`} value={billInput} onChange={(e) => {setBillInput(e.target.value)}} />
                     </div>
                 </div>
                 
@@ -94,7 +99,7 @@ const TipCard = () => {
                             : "dark-card-bg text-white"
                         }`} onClick={() => {setTip(50)}}>50%</button>
                         
-                        <input type="text" placeholder="Custom" className='input-bg rounded-md text-xl py-2 m-2 text-right input-text-color font-bold focus:ring-0 stuff' value={tip} onChange={(e) => {setTip(e.target.value)}} /> 
+                        <input type="text" placeholder="Custom" className='input-bg rounded-md text-xl py-2 m-2 text-right input-text-color font-bold focus:ring-0 blue-focus' value={tip} onChange={(e) => {setTip(e.target.value)}} /> 
                     </div>
                 </div>
 
@@ -105,7 +110,11 @@ const TipCard = () => {
                     
                     <div className='input-icons'>
                         <img className='icon' src="/assets/icon-person.svg" alt="people icon" />
-                        <input type="text" placeholder='0' className='input-bg rounded-lg text-right w-full input-text-color font-bold text-xl stuff focus:ring-0' value={peopleNum} onChange={(e) => {setPeopleNum(e.target.value)}} />
+                        <input type="text" placeholder='0' className={`input-bg rounded-lg text-right w-full input-text-color font-bold text-xl focus:ring-0 ${
+                            peopleNum == 0 && peopleNum != ''
+                            ? 'orange-focus'
+                            : 'blue-focus'
+                        }`} value={peopleNum} onChange={(e) => {setPeopleNum(e.target.value)}} />   
                     </div>
                 </div>
                 
