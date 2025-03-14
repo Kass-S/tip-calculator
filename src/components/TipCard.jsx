@@ -5,8 +5,8 @@ const TipCard = () => {
     const [peopleNum, setPeopleNum] = useState(0);
     const [tip, setTip] = useState(0);
 
-    const [tipAmount, setTipAmount] = useState(0.00);
-    const [total, setTotal] = useState(0.00);
+    const [tipAmount, setTipAmount] = useState(0);
+    const [total, setTotal] = useState(0);
 
     let billNum = Number(billInput);
     let people = Number(peopleNum);
