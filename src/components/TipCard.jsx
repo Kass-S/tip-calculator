@@ -53,12 +53,40 @@ const TipCard = () => {
                     <h5 className=" font-bold text-color-dark mx-6">
                         Select Tip %
                     </h5>
+
+                    
                     <div className='grid grid-cols-2 md:grid-cols-3 mx-4 font-bold'>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(5)}}>5%</button>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(10)}}>10%</button>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(15)}}>15%</button>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(25)}}>25%</button>
-                        <button className='inner-card-bg rounded-md text-xl py-2 m-2 text-white button-hover' onClick={(e) => {setTip(50)}}>50%</button>
+
+                        <button className={`rounded-md text-xl py-2 m-2  button-hover dark-card-bg ${
+                            tip == 5
+                            ? "dark-btn-bg input-text-color"
+                            : "dark-card-bg text-white"
+                        }`} onClick={() => {setTip(5)}}>5%</button>
+
+                        <button className={`rounded-md text-xl py-2 m-2 button-hover ${
+                            tip == 10
+                            ? "dark-btn-bg input-text-color"
+                            : "dark-card-bg text-white"
+                        }`} onClick={() => {setTip(10)}}>10%</button>
+
+                        <button className={`rounded-md text-xl py-2 m-2 button-hover ${
+                            tip == 15
+                            ? "dark-btn-bg input-text-color"
+                            : "dark-card-bg text-white"
+                        }`} onClick={() => {setTip(15)}}>15%</button>
+
+                        <button className={`rounded-md text-xl py-2 m-2 button-hover ${
+                            tip == 25
+                            ? "dark-btn-bg input-text-color"
+                            : "dark-card-bg text-white"
+                        }`} onClick={() => {setTip(25)}}>25%</button>
+
+                        <button className={`rounded-md text-xl py-2 m-2 button-hover ${
+                            tip == 50
+                            ? "dark-btn-bg input-text-color"
+                            : "dark-card-bg text-white"
+                        }`} onClick={() => {setTip(50)}}>50%</button>
+                        
                         <input type="text" placeholder="Custom" className='input-bg rounded-md text-xl py-2 m-2 text-right input-text-color font-bold focus:ring-0 stuff' onChange={(e) => {setTip(e.target.value)}} /> 
                     </div>
                 </div>
@@ -76,7 +104,7 @@ const TipCard = () => {
                 
             </div>      
             
-            <div className="max-w-lg inner-card-bg p-4 m-6 rounded-2xl">
+            <div className="max-w-lg dark-card-bg p-4 m-6 rounded-2xl">
                 <div className='m-2 my-3 md:m-6 flex justify-between'>
                     <div>
                         <h5 className="font-bold text-white">
@@ -104,7 +132,7 @@ const TipCard = () => {
                 </div>
 
                 <div className='mx-2 md:mx-6 mt-6 md:mt-28'>
-                    <button className='input-text-color button-hover rounded-md reset-btn-bg p-2 w-full font-bold'>RESET</button>
+                    <button className='input-text-color button-hover rounded-md dark-btn-bg p-2 w-full font-bold'>RESET</button>
                 </div>
 
             </div>
